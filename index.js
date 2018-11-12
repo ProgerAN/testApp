@@ -18,12 +18,6 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
   bot.sendMessage(chatId, resp);
 });
 
-bot.start((ctx) => {
-  ctx.reply("Клавиатура", Markup.inlineKeyboard([
-    Markup.callbackButton("Тестовая кнопка", "groups"),
-  ]).extra());
-});
-
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
