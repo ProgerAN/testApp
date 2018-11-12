@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 web/
+bot: python3 bot.py
