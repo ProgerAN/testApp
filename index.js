@@ -21,7 +21,7 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, `Пошел нахуй ${msg.from.first_name}`);
+  bot.sendMessage(chatId, `Пошел отсюда ${msg.from.first_name}`);
 });
 
 var options = {
