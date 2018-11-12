@@ -1,15 +1,4 @@
-import (
-  "net/http"
-  )
-  
-  func MainHandler(resp http.ResponseWriter, _ *http.Request) {
-      resp.Write([]byte("Hi there! I'm DndSpellsBot!"))
-  }
-  
-  func main() {
-      http.HandleFunc("/", MainHandler)
-      go http.ListenAndServe(":"+os.Getenv("PORT"), nil)
-  }
+
 
 const TelegramBot = require('node-telegram-bot-api');
 
