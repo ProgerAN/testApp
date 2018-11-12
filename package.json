@@ -1,17 +1,19 @@
 {
-  "name": "testgit",
+  "name": "bots",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "engines": {
-    "node" : "8.12.0"
+    "node": "8.12.0"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-telegram-bot-api": "^0.30.0"
+    "node-telegram-bot-api": "^0.30.0",
+    "request": "^2.86.0"
   }
 }
