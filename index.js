@@ -21,5 +21,5 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, `Сообщения принял Привет: ${msg.from.first_name}`);
+  bot.sendMessage(chatId, `Сообщения принял Привет: "${msg.from.first_name}"`);
 });
