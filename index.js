@@ -1,9 +1,29 @@
-const TelegramBot = require('node-telegram-bot-api')
+const TelegramBot = require('node-telegram-bot-api');
 
-const TOEKN = '678609158:AAEx7rtw_FXLDFwfSS1L6RDsGe-2Fu-nBoM'
+// replace the value below with the Telegram token you receive from @BotFather
+const token = '678609158:AAEx7rtw_FXLDFwfSS1L6RDsGe-2Fu-nBoM';
 
-const bot = new TelegramBot(TOKEN, {polling: true})
+// Create a bot that uses 'polling' to fetch new updates
+const bot = new TelegramBot(token, {polling: true});
 
-bot.on('message', msg => {
-  bot.sendMessage(msg.chat.id, `Hello drom HEROKU, bot sasy "${msg.from.first_name}"`)
-})
+// Matches "/echo [whatever]"
+bot.onText(/\/echo (.+)/, (msg, match) => {
+  // 'msg' is the received Message from Telegram
+  // 'match' is the result of executing the regexp above on the text content
+  // of the message
+
+  const chatId = msg.chat.id;
+  const resp = match[1]; // the captured "whatever"
+
+  // send back the matched "whatever" to the chat
+  bot.sendMessage(chatId, resp);
+});
+
+// Listen for any kind of message. There are different kinds of
+// messages.
+bot.on('message', (msg) => {
+  const chatId = msg.chat.id;
+
+  // send a message to the chat acknowledging receipt of their message
+  bot.sendMessage(chatId, 'Received your message');
+});
