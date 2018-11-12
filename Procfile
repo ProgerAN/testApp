@@ -1,1 +1,1 @@
-bot: ruby main.rb
+web: node index.js
