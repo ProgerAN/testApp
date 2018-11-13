@@ -16,7 +16,7 @@ bot.onText(/\/pask/, function (msg, match) {
 
 // Написать мне ... (/echo Hello World! - пришлет сообщение с этим приветствием.)
 bot.onText(/\/echo (.+)/, (msg, match) => {
-  const chatId = msg.chat.id;
+  const chatId = msg.chat.id; 
   const resp = match[1];
 
   bot.sendMessage(chatId, resp);
