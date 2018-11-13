@@ -21,7 +21,7 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, `Пошел отсюда ${msg.from.first_name}`);
+  bot.sendMessage(chatId, `Команда не распознана`);
 });
 
 var options = {
@@ -34,6 +34,6 @@ var options = {
   })
 };
 
-bot.onText(/\/start_test/, function (msg, match) {
+bot.onText(/\/com/, function (msg, match) {
   bot.sendMessage(msg.chat.id, 'Выберите любую кнопку:', options);
 });
