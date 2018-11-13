@@ -23,17 +23,25 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
-        ["hi"],
-        ["Инфо"],
+        ["Pask"],
+        ["INFO"],
       ]
     }
   });
 
 });
 bot.on('message', (msg) => {
-  
-  var Hi = "hi";
-  if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
-    bot.sendMessage(msg.chat.id,"<b>bold</b> \n <i>italic</i> \n <em>italic with em</em> \n <a href=\"http://www.example.com/\">inline URL</a> \n <code>inline fixed-width code</code> \n <pre>pre-formatted fixed-width code block</pre>" ,{parse_mode : "HTML"});
-    }
- });
+
+  var Pask = "hi";
+  if (msg.text.toString().toLowerCase().indexOf(Pask) === 0) {
+    bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
+      parse_mode: "HTML"
+    });
+  }
+  var INFO = "hi";
+  else if(msg.text.toString().toLowerCase().indexOf(INFO) === 0) {
+    bot.sendMessage(msg.chat.id, "Ты нашел Посхалку 2:)", {
+      parse_mode: "HTML"
+    });
+  }
+});
