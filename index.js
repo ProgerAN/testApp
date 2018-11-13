@@ -31,12 +31,9 @@ bot.onText(/\/start/, (msg) => {
 
 });
 bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
+
   var Hi = "hi";
   if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
-    bot.sendMessage(chatId, "Hello dear user");
-  } 
-  else {
-    bot.sendMessage(chatId, `Команда не распознана`);
-  }
-});
+    bot.sendMessage(msg.chat.id,"<b>bold</b> \n <i>italic</i> \n <em>italic with em</em> \n <a href=\"http://www.example.com/\">inline URL</a> \n <code>inline fixed-width code</code> \n <pre>pre-formatted fixed-width code block</pre>" ,{parse_mode : "HTML"});
+    }
+ });
