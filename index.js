@@ -23,7 +23,7 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
-        ["Пасхалка"],
+        ["Паскалка"],
         ["Инфо"],
       ]
     }
@@ -31,11 +31,9 @@ bot.onText(/\/start/, (msg) => {
 
 });
 bot.on('message', (msg) => {
-
-  var Hi = "Пасхалка";
+  
+  var Hi = "Паскалка";
   if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
     bot.sendMessage(msg.chat.id,"Ты нашел посхалку :)");
-  } else {
-    bot.sendMessage(msg.chat.id,"Холоп, команду не понел");
-  }
+    }
  });
