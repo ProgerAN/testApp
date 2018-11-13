@@ -5,22 +5,12 @@ require('http').createServer().listen(process.env.PORT || 5000).on('request', fu
 
 const TelegramBot = require('node-telegram-bot-api');
 
-const token = '678609158:AAEx7rtw_FXLDFwfSS1L6RDsGe-2Fu-nBoM';
+// const token = 'Your Token';
 
-const bot = new TelegramBot(token, {polling: true});
-
-var options = {
-  reply_markup: JSON.stringify({
-    inline_keyboard: [
-      [{ text: 'Кнопка 1', callback_data: 'com' }],
-      [{ text: 'Кнопка 2', callback_data: 'data 2' }],
-      [{ text: 'Кнопка 3', callback_data: 'text 3' }]
-    ]
-  })
-};
+const bot = new TelegramBot(getenv("TOKEN"), {polling: true});
 
 bot.onText(/\/com/, function (msg, match) {
-  bot.sendMessage(msg.chat.id, 'Выберите любую кнопку:', options);
+  bot.sendMessage(msg.chat.id, 'Ты нашел подсказку :)');
 });
 
 bot.onText(/\/echo (.+)/, (msg, match) => {
