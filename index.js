@@ -37,5 +37,5 @@ bot.on('message', (msg) => {
     bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
       parse_mode: "HTML"
     });
- }
+  }
 });
