@@ -2,20 +2,16 @@ require('http').createServer().listen(process.env.PORT || 5000).on('request', fu
   res.end('')
 });
 
-
 const TelegramBot = require('node-telegram-bot-api');
-
-// const token = ' ... ';
-const token = process.env.TOKEN;
-
+const token = process.env.TOKEN; // Heroku configVar
 const bot = new TelegramBot(token, {polling: true});
 
-bot.onText(/\/com/, function (msg, match) {
+bot.onText(/\/pask/, function (msg, match) {
   bot.sendMessage(msg.chat.id, 'Ты нашел подсказку :)');
 });
 
+// Написать мне ... (/echo Hello World! - пришлет сообщение с этим приветствием.)
 bot.onText(/\/echo (.+)/, (msg, match) => {
-
   const chatId = msg.chat.id;
   const resp = match[1];
 
