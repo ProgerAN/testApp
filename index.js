@@ -25,7 +25,7 @@ bot.onText(/\/start/, (msg) => {
   });
 });
 bot.onText(/\/Sicret/, (msg) => {
-  bot.sendMessage(msg.chat.id, "Ты нашел посхалку :)"
+  bot.sendMessage(msg.chat.id, "Ты нашел посхалку :)")
   });
 });
 
