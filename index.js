@@ -7,7 +7,7 @@ var reqTimer = setTimeout(function wakeUp() {
 }, 1200000);
 
 const TelegramBot = require('node-telegram-bot-api');
-const token = process.env.TOKEN; // Heroku configVar
+const token = process.env.TOKEN; // Heroku configVar 
 const bot = new TelegramBot(token, {polling: true});
  
 bot.onText(/\/pask/, function (msg, match) {
