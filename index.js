@@ -37,11 +37,5 @@ bot.on('message', (msg) => {
     bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
       parse_mode: "HTML"
     });
-  }
-  var INFO = "hi";
-  else if(msg.text.toString().toLowerCase().indexOf(INFO) === 0) {
-    bot.sendMessage(msg.chat.id, "Ты нашел Посхалку 2:)", {
-      parse_mode: "HTML"
-    });
-  }
+ }
 });
