@@ -12,8 +12,19 @@ const bot = new TelegramBot(token, {polling: true});
  
 
 
-bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, `Команда не распознана`);
+
+bot.onText(/\/start/, (msg) => {
+  
+  bot.sendMessage(msg.chat.id, "Welcome", {
+    "reply_markup": {
+      "keyboard": [["Sample text", "Second sample"],   ["Keyboard"], ["I'm robot"]]
+    }
+  });
+  
 });
+    bot.on('message', (msg) => {
+      const chatId = msg.chat.id;
+      
+      bot.sendMessage(chatId, `Команда не распознана`);
+    });
