@@ -32,10 +32,10 @@ bot.onText(/\/start/, (msg) => {
 });
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
-  var Pask = "Паскалка";
-  if (msg.text.toString().toLowerCase().indexOf(Pask) === 0) {
-    bot.sendMessage(msg.chat.id, "Ты нашел пасхалку :)");
-  }
+  var Hi = "hi";
+  if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
+    bot.sendMessage(chatId, "Hello dear user");
+  } 
   else {
     bot.sendMessage(chatId, `Команда не распознана`);
   }
