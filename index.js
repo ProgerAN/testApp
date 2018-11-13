@@ -15,27 +15,22 @@ const bot = new TelegramBot(token, {
 });
 
 
-
-
-
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
-        ["Sicret", "Second sample"],
-        ["Keyboard"],
-        ["I'm robot"]
+        ["Sicret"]
       ]
     }
   });
 });
-bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
-
-  bot.sendMessage(chatId, `Команда не распознана`);
-});
-
-bot.onText(/\Sicret/, (msg) => {
+bot.onText(/\/Sicret/, (msg) => {
   bot.sendMessage(msg.chat.id, "Ты нашел посхалку :)"
   });
 });
+
+// bot.on('message', (msg) => {
+//   const chatId = msg.chat.id;
+
+//   bot.sendMessage(chatId, `Команда не распознана`);
+// });
