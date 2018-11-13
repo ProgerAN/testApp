@@ -9,6 +9,19 @@ const token = '678609158:AAEx7rtw_FXLDFwfSS1L6RDsGe-2Fu-nBoM';
 
 const bot = new TelegramBot(token, {polling: true});
 
+var options = {
+  reply_markup: JSON.stringify({
+    inline_keyboard: [
+      [{ text: 'Кнопка 1', callback_data: '1' }],
+      [{ text: 'Кнопка 2', callback_data: 'data 2' }],
+      [{ text: 'Кнопка 3', callback_data: 'text 3' }]
+    ]
+  })
+};
+
+bot.onText(/\/com/, function (msg, match) {
+  bot.sendMessage(msg.chat.id, 'Выберите любую кнопку:', options);
+});
 
 bot.onText(/\/echo (.+)/, (msg, match) => {
 
@@ -22,18 +35,4 @@ bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
   bot.sendMessage(chatId, `Команда не распознана`);
-});
-
-var options = {
-  reply_markup: JSON.stringify({
-    inline_keyboard: [
-      [{ text: 'Кнопка 1', callback_data: '1' }],
-      [{ text: 'Кнопка 2', callback_data: 'data 2' }],
-      [{ text: 'Кнопка 3', callback_data: 'text 3' }]
-    ]
-  })
-};
-
-bot.onText(/\/com/, function (msg, match) {
-  bot.sendMessage(msg.chat.id, 'Выберите любую кнопку:', options);
 });
