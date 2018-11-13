@@ -23,12 +23,19 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
-        ["Паскалка", "Инфо"],
+        ["Паскалка"],
+        ["Инфо"],
       ]
     }
   });
 
 });
+
+var Pask = "Паскалка";
+if (msg.text.toString().toLowerCase().indexOf(Pask) === 0) {
+  bot.sendMessage(msg.chat.id, "Ты нашел пасхалку :)");
+}
+
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
 
