@@ -1,6 +1,10 @@
-require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
-  res.end('')
-});
+require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){ res.end('') });
+var reqTimer = setTimeout(function wakeUp() {
+  request("https://hero-bot-sp.herokuapp.com", function() {
+     console.log("WAKE UP DYNO");
+  });
+  return reqTimer = setTimeout(wakeUp, 1200000);
+}, 1200000);
 
 const TelegramBot = require('node-telegram-bot-api');
 const token = process.env.TOKEN; // Heroku configVar
