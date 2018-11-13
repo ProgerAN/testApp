@@ -20,7 +20,7 @@ bot.onText(/\/start/, (msg) => {
     "reply_markup": {
       "keyboard": [["Sample text", "Second sample"],   ["Keyboard"], ["I'm robot"]]
     }
-  });
+  }); 
   
 });
     bot.on('message', (msg) => {
