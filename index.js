@@ -5,7 +5,7 @@ require('http').createServer().listen(process.env.PORT || 5000).on('request', fu
 
 const TelegramBot = require('node-telegram-bot-api');
 
-// const token = '...';
+// const token = ' ... ';
 const token = getenv('TOKEN')
 
 const bot = new TelegramBot(token, {polling: true});
