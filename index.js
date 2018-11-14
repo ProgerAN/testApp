@@ -23,7 +23,7 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
-        ["Pask","INFO"],
+        ["pask","info"],
         ["AAA"],
       ]
     }
@@ -32,7 +32,7 @@ bot.onText(/\/start/, (msg) => {
 });
 bot.on('message', (msg) => {
 
-  var Pask = "Pask";
+  var Pask = "pask";
   if (msg.text.toString().toLowerCase().indexOf(Pask) === 0) {
     bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
       parse_mode: "HTML"
