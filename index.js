@@ -39,7 +39,7 @@ bot.on('message', (msg) => {
     });
   }
   var info = "info";
-  else if (msg.text.toString().toLowerCase().indexOf(info) === 0) {
+  if (msg.text.toString().toLowerCase().indexOf(info) === 0) {
     bot.sendMessage(msg.chat.id, "Типо информация", {
       parse_mode: "HTML"
     });
