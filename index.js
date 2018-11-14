@@ -33,13 +33,13 @@ bot.onText(/\/start/, (msg) => {
 bot.on('message', (msg) => {
 
   var Pask = "pask";
+  var info = "info";
   if (msg.text.toString().toLowerCase().indexOf(Pask) === 0) {
     bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
       parse_mode: "HTML"
     });
   }
-  var info = "info";
-  if (msg.text.toString().toLowerCase().indexOf(info) === 0) {
+  else if (msg.text.toString().toLowerCase().indexOf(info) === 0) {
     bot.sendMessage(msg.chat.id, "Типо информация", {
       parse_mode: "HTML"
     });
