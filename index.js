@@ -33,7 +33,7 @@ bot.onText(/\/start/, (msg) => {
 bot.on('message', (msg) => {
 
   var Pask = "pask";
-  var info = "info";
+  var info = "инфо";
   if (msg.text.toString().toLowerCase().indexOf(Pask) === 0) {
     bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
       parse_mode: "HTML"
