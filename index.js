@@ -23,7 +23,7 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
-        ["pask","info"],
+        ["pask","инфо"],
         ["AAA"],
       ]
     }
