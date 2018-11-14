@@ -38,4 +38,15 @@ bot.on('message', (msg) => {
       parse_mode: "HTML"
     });
   }
+  var info = "info";
+  else if (msg.text.toString().toLowerCase().indexOf(info) === 0) {
+    bot.sendMessage(msg.chat.id, "Типо информация", {
+      parse_mode: "HTML"
+    });
+  }
+  else {
+    bot.sendMessage(msg.chat.id, "Эй, холоп остановись", {
+      parse_mode: "HTML"
+    });
+  }
 });
