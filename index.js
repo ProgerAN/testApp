@@ -23,8 +23,8 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
-        ["Pask"],
-        ["INFO"],
+        ["Pask","INFO"],
+        ["AAA"],
       ]
     }
   });
@@ -32,15 +32,9 @@ bot.onText(/\/start/, (msg) => {
 });
 bot.on('message', (msg) => {
 
-  var Pask = "hi";
+  var Pask = "Pask";
   if (msg.text.toString().toLowerCase().indexOf(Pask) === 0) {
     bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
-      parse_mode: "HTML"
-    });
-  }
-  var INFO = "hi";
-  else if(msg.text.toString().toLowerCase().indexOf(INFO) === 0) {
-    bot.sendMessage(msg.chat.id, "Ты нашел Посхалку 2:)", {
       parse_mode: "HTML"
     });
   }
