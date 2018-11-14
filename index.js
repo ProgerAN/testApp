@@ -42,7 +42,7 @@ bot.on('message', (msg) => {
     });
   }
   else if (msg.text.toString().indexOf(info) === 0) {
-    bot.sendMessage(msg.chat.id, "Типо информация", {
+    bot.sendMessage(msg.chat.id, "Ну это бот \n И еще его сделал @ProgerAN \n Ну и наэтом наврное все", {
       parse_mode: "HTML"
     });
   }
