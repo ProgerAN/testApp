@@ -30,7 +30,7 @@ bot.onText(/\/start/, (msg) => {
     }
   });
 
-});
+}); 
 bot.on('message', (msg) => {
 
   var Pask = "Пасхалка";
