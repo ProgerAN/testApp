@@ -35,12 +35,7 @@ bot.on('message', (msg) => {
 
   var Pask = "Пасхалка";
   var info = "Инфо";
-  var WelcomeMsg = "Welcome";
-  if (msg.text.toString().indexOf(WelcomeMsg) === 0) {
-    bot.sendMessage(msg.chat.id, `Привет ${msg.from.first_name}`
-    );
-  }
-  else if (msg.text.toString().indexOf(Pask) === 0) {
+  if (msg.text.toString().indexOf(Pask) === 0) {
     bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
       parse_mode: "HTML"
     });
