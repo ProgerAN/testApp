@@ -45,7 +45,7 @@ bot.on('message', (msg) => {
       parse_mode: "HTML"
     });
   }
-  else { 
+  else {  
     bot.sendMessage(msg.chat.id, "Невеная команда", {
       parse_mode: "HTML"
     });
