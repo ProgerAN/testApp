@@ -49,6 +49,6 @@ bot.on('message', (msg) => {
     bot.sendMessage(msg.chat.id, "Невеная команда", {
       parse_mode: "HTML"
     });
-    telegramBot.sendAnimation(msg.chat.id, 'https://i.gifer.com/1z4Q.gif');
+    bot.sendAnimation(msg.chat.id, 'https://i.gifer.com/1z4Q.gif');
   }
 });
