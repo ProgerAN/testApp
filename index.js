@@ -40,7 +40,7 @@ bot.on('message', (msg) => {
       parse_mode: "HTML"
     });
   }
-  else if (msg.text.toString().indexOf(info) === 0) {
+  else if (msg.text.toString().indexOf(info) === 0) { 
     bot.sendMessage(msg.chat.id, " Ну это бот \n И еще его сделал @ProgerAN \n Ну и на этом наверное все", {
       parse_mode: "HTML"
     });
