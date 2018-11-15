@@ -50,6 +50,7 @@ bot.on('message', (msg) => {
     bot.sendMessage(msg.chat.id, "Help Me", { 
       parse_mode: "HTML"
     });
+    bot.sendPhoto(msg.chat.id, 'http://for-dle.ru/uploads/posts/2017-07/1499537558_viktor_kern_blk_404_16_9_1600_eng.png');
 
   }
 });
