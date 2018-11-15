@@ -20,7 +20,7 @@ const bot = new TelegramBot(token, {
 
 bot.onText(/\/start/, (msg) => {
 
-  bot.sendMessage(msg.chat.id, "Wrlcome", {
+  bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
         ["Пасхалка","Инфо"],
@@ -35,8 +35,8 @@ bot.on('message', (msg) => {
 
   var Pask = "Пасхалка";
   var info = "Инфо";
-  var WelcomMsg = "Welcom";
-  if (msg.text.toString().indexOf(WelcomMsg) === 0) {
+  var WelcomeMsg = "Welcome";
+  if (msg.text.toString().indexOf(WelcomeMsg) === 0) {
     bot.sendMessage(msg.chat.id, `Привет ${msg.from.first_name}`
     );
   }
