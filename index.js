@@ -46,8 +46,9 @@ bot.on('message', (msg) => {
     });
   }
   else {
-    bot.sendMessage(msg.chat.id, "Эй, холоп остановись", {
+    bot.sendMessage(msg.chat.id, "Команда не распознана", {
       parse_mode: "HTML"
     });
+    bot.sendAnimation(msg.chat.id, 'https://i.gifer.com/1z4Q.gif')
   }
 });
