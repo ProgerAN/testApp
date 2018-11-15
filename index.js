@@ -20,7 +20,7 @@ const bot = new TelegramBot(token, {
 
 bot.onText(/\/start/, (msg) => {
 
-  bot.sendMessage(msg.chat.id, "Help me", {
+  bot.sendMessage(msg.chat.id, "Wrlcome", {
     "reply_markup": {
       "keyboard": [
         ["Пасхалка","Инфо"],
@@ -45,10 +45,9 @@ bot.on('message', (msg) => {
       parse_mode: "HTML"
     });
   }
-  else {  
-    bot.sendMessage(msg.chat.id, "Невеная команда", {
+  else {
+    bot.sendMessage(msg.chat.id, "", {
       parse_mode: "HTML"
     });
-    bot.sendAnimation(msg.chat.id, 'https://i.gifer.com/1z4Q.gif');
   }
 });
