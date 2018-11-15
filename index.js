@@ -31,6 +31,7 @@ bot.onText(/\/start/, (msg) => {
   });
 
 });
+
 bot.on('message', (msg) => {
 
   var Pask = "Пасхалка";
@@ -49,6 +50,6 @@ bot.on('message', (msg) => {
     bot.sendMessage(msg.chat.id, "Команда не распознана", {
       parse_mode: "HTML"
     });
-    bot.sendAnimation(msg.chat.id, 'https://i.gifer.com/1z4Q.gif')
+
   }
 });
