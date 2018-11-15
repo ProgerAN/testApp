@@ -20,7 +20,7 @@ const bot = new TelegramBot(token, {
 
 bot.onText(/\/start/, (msg) => {
 
-  bot.sendMessage(msg.chat.id, "Wrlcome", {
+  bot.sendMessage(msg.chat.id, "Welcome", {
     "reply_markup": {
       "keyboard": [
         ["Пасхалка","Инфо"],
@@ -40,13 +40,13 @@ bot.on('message', (msg) => {
       parse_mode: "HTML"
     });
   }
-  else if (msg.text.toString().indexOf(info) === 0) { 
+  else if (msg.text.toString().indexOf(info) === 0) {
     bot.sendMessage(msg.chat.id, " Ну это бот \n И еще его сделал @ProgerAN \n Ну и на этом наверное все", {
       parse_mode: "HTML"
     });
   }
   else {
-    bot.sendMessage(msg.chat.id, "", {
+    bot.sendMessage(msg.chat.id, "Эй, холоп остановись", {
       parse_mode: "HTML"
     });
   }
