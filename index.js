@@ -47,7 +47,7 @@ bot.on('message', (msg) => {
     });
   } 
   else {
-    bot.sendMessage(msg.chat.id, "Help Me", {
+    bot.sendMessage(msg.chat.id, "Help Me", { 
       parse_mode: "HTML"
     });
 
