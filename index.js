@@ -44,7 +44,7 @@ bot.on('message', (msg) => {
     bot.sendMessage(msg.chat.id, " Ну это бот \n И еще его сделал @ProgerAN \n Ну и на этом наверное все", {
       parse_mode: "HTML"
     });
-  }
+  } 
   else {
     bot.sendMessage(msg.chat.id, "Команда не распознана", {
       parse_mode: "HTML"
