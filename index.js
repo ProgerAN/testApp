@@ -20,13 +20,12 @@ const bot = new TelegramBot(token, {
 
 bot.onText(/\/start/, (msg) => {
 
-  bot.sendMessage(msg.chat.id, "Welcome", {
+  bot.sendMessage(msg.chat.id, "", {
     "reply_markup": {
       "keyboard": [
         ["Пасхалка","Инфо"],
         ["AAA"],
         ["BBB", "BBB"],
-        ["AAA"],
       ]
     }
   });
@@ -42,12 +41,12 @@ bot.on('message', (msg) => {
     });
   }
   else if (msg.text.toString().indexOf(info) === 0) {
-    bot.sendMessage(msg.chat.id, "Ну это бот \n И еще его сделал @ProgerAN \n Ну и наэтом наврное все", {
+    bot.sendMessage(msg.chat.id, " Ну это бот \n И еще его сделал @ProgerAN \n Ну и на этом наверное все", {
       parse_mode: "HTML"
     });
   }
   else {
-    bot.sendMessage(msg.chat.id, "Эй, холоп остановись", {
+    bot.sendMessage(msg.chat.id, "Команда не распознана", {
       parse_mode: "HTML"
     });
   }
