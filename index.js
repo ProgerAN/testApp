@@ -20,7 +20,7 @@ const bot = new TelegramBot(token, {
 
 bot.onText(/\/start/, (msg) => {
 
-  bot.sendMessage(msg.chat.id, "", {
+  bot.sendMessage(msg.chat.id, "Wrlcome", {
     "reply_markup": {
       "keyboard": [
         ["Пасхалка","Инфо"],
@@ -30,12 +30,17 @@ bot.onText(/\/start/, (msg) => {
     }
   });
 
-}); 
+});
 bot.on('message', (msg) => {
 
   var Pask = "Пасхалка";
   var info = "Инфо";
-  if (msg.text.toString().indexOf(Pask) === 0) {
+  var WelcomMsg = "Welcom";
+  if (msg.text.toString().indexOf(WelcomMsg) === 0) {
+    bot.sendMessage(msg.chat.id, `Привет ${msg.from.first_name}`
+    );
+  }
+  else if (msg.text.toString().indexOf(Pask) === 0) {
     bot.sendMessage(msg.chat.id, "Ты нашел Посхалку :)", {
       parse_mode: "HTML"
     });
@@ -46,7 +51,7 @@ bot.on('message', (msg) => {
     });
   }
   else {
-    bot.sendMessage(msg.chat.id, "Команда не распознана", {
+    bot.sendMessage(msg.chat.id, "Невеная команда", {
       parse_mode: "HTML"
     });
   }
