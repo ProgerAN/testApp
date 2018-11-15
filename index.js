@@ -47,7 +47,7 @@ bot.on('message', (msg) => {
     });
   } 
   else {
-    bot.sendMessage(msg.chat.id, "Команда не распознана", {
+    bot.sendMessage(msg.chat.id, "Help Me", {
       parse_mode: "HTML"
     });
 
